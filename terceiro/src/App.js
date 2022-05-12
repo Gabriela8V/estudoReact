@@ -1,14 +1,37 @@
 import { useState } from "react";
 function App() {
-  const [numero, setNumero] = useState(1);
+  const [produto, setProduto] = useState([
+    { id: 500, nome: "Mouse", categoria: "informática", preco: 50.5 },
+    { id: 501, nome: "Teclado", categoria: "informática", preco: 150.9 },
+  ]);
 
   return (
     <div>
-      <p>O número atual é {numero}</p>
-      <button title="Clique" onClick={() => setNumero(numero + 1)}>
-        {" "}
-        Clique aqui{" "}
+      <button
+        onClick={() =>
+          setProduto(
+            produto.concat({
+              id: 502,
+              nome: "SmartFone",
+              categoria: "Telefonia",
+              preco: 5000,
+            })
+          )
+        }
+      >
+        Adicionar produto
       </button>
+      <h2>Produtos cadastrados</h2>
+      {produto.map((item, index) => (
+        <div key={index}>
+          <h3>{item.nome}</h3>
+          <ul>
+            <li>Código do produto {item.id}</li>
+            <li>Categoria do produto {item.categoria}</li>
+            <li>Preço dp produto {item.preco}</li>
+          </ul>
+        </div>
+      ))}
     </div>
   );
 }
