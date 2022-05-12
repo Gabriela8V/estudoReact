@@ -8,7 +8,11 @@ function App() {
   return (
     <div>
       <button
-        onClick={() =>
+        onClick={() => {
+          let id = prompt("Entre com o id do produto");
+          let nome = prompt("Entre com o nome do produto");
+          let categoria = prompt("Entre com a categoria do produto");
+          let preco = prompt("Entre com o preco do produto");
           setProduto(
             produto.concat({
               id: 502,
@@ -16,8 +20,8 @@ function App() {
               categoria: "Telefonia",
               preco: 5000,
             })
-          )
-        }
+          );
+        }}
       >
         Adicionar produto
       </button>
