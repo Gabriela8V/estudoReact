@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  padding: 40px;
+  background-color: #fff;
+  text-align: center;
+  width: 100vw;
+}
+.navbar ul {
+  list-style: none;
+}
+.navbar ul li {
+  display: inline;
+  margin-left: 30px;
+}
+.navbar ul li a {
+  font-family: verdana;
+  font-size: 12pt;
+  text-decoration: none;
+  color: #000;
+  transform: ease 0.5s;
+}
+.navbar ul li a:hover {
+  color: #999;
+}
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #fff;
+  justify-content: center;
+}
+.Cards {
+  width: 30vw;
+  height: 60vh;
+
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #eee;
+}
+
+.Cards img {
+  width: 100px;
+  height: 60px;
+  cursor: pointer;
+  transition: ease 0.5s;
+}
+
+.Cards img:hover {
+  margin-left: 40px;
+}
+
+.Panel {
+  width: 51vw;
+  height: 60vh;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #eee;
+  background-image: url("../img/creditcard1.png");
+}
+.Waitlist,
+.Plans,
+.Balance {
+  width: 20vw;
+  height: 50vh;
+  margin: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #eee;
+}
